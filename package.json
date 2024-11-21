@@ -1,0 +1,18 @@
+{
+  "name": "test1",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "k-build",
+    "dev": "k-build --watch",
+    "test": "vitest run",
+    "test-watch": "vitest --watch"
+  },
+  "keywords": [],
+  "author": "jimmy",
+  "license": "ISC",
+  "devDependencies": {
+    "@kurohyou/k-scaffold": "*",
+    "@vitest/ui": "*",
+    "vitest": "*"
+  }
+}

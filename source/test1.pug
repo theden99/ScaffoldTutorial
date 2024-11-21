@@ -1,0 +1,23 @@
+include k-scaffold
+//- We define our rolltemplate name here so that we can use it as a variable elsewhere. We'll be using a single template for the entire system
+- let templateName = 'test1';
+- varObjects.sheetTypes = ['character','npc'];
+
+//- Now, for our actual sheet. We'll wrap this in a main element and give it an ID of main.
+main#main
+  +tabs({name:'jimmy tabs',defaultActiveTab:'settings'})
+    +tab({name:'character'})
+      include articles/character/_character.pug
+    +tab({name:'npc'})
+      include articles/npc/_npc.pug
+    +tab({name:'settings'})
+      include articles/settings/_settings.pug
+
++hidden({name:'template start',value:`&{template:${templateName}} {{character_name=@{character_name}}} {{character_id=@{character_id}}}`})
+include rolltemplates/_thj2etemplate.pug
++kscript('test1')
+  //- All additional javascript files should start here
+  include javascript/variables.js
+  include javascript/calculators.js
+  include javascript/triggeredfuncs.js
+  include javascript/rollfunctions.js

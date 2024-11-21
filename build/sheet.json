@@ -1,0 +1,13 @@
+{
+  "html": "test1.html",
+  "css": "test1.css",
+  "authors": [
+    "jimmy"
+  ],
+  "roll20userid": [
+    ""
+  ],
+  "preview": "preview.jpg",
+  "legacy": false,
+  "instructions": "# test1"
+}
